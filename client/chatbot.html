@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Devi - Period Chatbot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --light-pink: #FFE5EC;
+      --soft-pink: #FFC2D1;
+      --medium-pink: #FFB3C6;
+      --vivid-pink: #FF8FAB;
+      --bold-pink: #FB6F92;
+    }
+    .back-container {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  background-color: #FF8FAB;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #FB6F92;
+}
+
+    body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFE5EC;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+    }
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    #chat-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      background-color: var(--soft-pink);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    h1{
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      color: var(--bold-pink);
+      margin-bottom: 3rem;
+    }
+    #prompt {
+      width: 75%;
+      padding: 10px;
+      margin-right: 10px;
+      border: 1px solid var(--medium-pink);
+      border-radius: 10px;
+    }
+
+    #send {
+      background-color: var(--bold-pink);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    #send:hover {
+      background-color: var(--vivid-pink);
+    }
+
+    #response {
+      margin-top: 20px;
+      background: var(--light-pink);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: left;
+    }
+
+    #response p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+    .chat-message {
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  max-width: 80%;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+.chat-message.user {
+  background-color: #dbeafe; /* light blue */
+  text-align: right;
+  margin-left: auto;
+}
+
+.chat-message.bot {
+  background-color: #f3f4f6; /* light gray */
+  text-align: left;
+  margin-right: auto;
+}
+
+
+  </style>
+</head>
+<body>
+  <main>
+    <div class="back-container">
+        <a href="dashboard.html" class="back-btn">Dashboard</a>
+    </div>      
+    <div id="chat-container">
+      <div id="chat-header"><h1>Ask Devi - Your Period Companion 💬</h1></div>
+      <input type="text" id="prompt" placeholder="Ask anything about your health..." />
+      <button id="send">Send</button>
+      <div id="response"></div>
+    </div>
+  </main>
+  <script src="js/chatbot.js"></script>
+  <script>
+    function goToDashboard() {
+      window.location.href = "dashboard.html"; // change the path as needed
+    }
+  </script>
+  
+</body>
+</html>

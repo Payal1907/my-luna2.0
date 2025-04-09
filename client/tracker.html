@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Period Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+  --light-pink: #FFE5EC;
+  --soft-pink: #FFC2D1;
+  --medium-pink: #FFB3C6;
+  --vivid-pink: #FF8FAB;
+  --bold-pink: #FB6F92;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-pink);
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  color: var(--bold-pink);
+  font-size: 2rem;
+}
+
+form {
+  background-color: white;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(251, 111, 146, 0.2);
+  border: 2px solid var(--soft-pink);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+input[type="date"],
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  border: 1.5px solid var(--medium-pink);
+  border-radius: 8px;
+  background-color: var(--soft-pink);
+  font-size: 15px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+button {
+  background-color: var(--bold-pink);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--vivid-pink);
+}
+
+#nextPeriodDate,
+#calendar {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: var(--soft-pink);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 6px solid var(--bold-pink);
+  box-shadow: 0 4px 10px rgba(255, 143, 171, 0.2);
+}
+
+  </style>
+</head>
+<body>
+  <h2>LunaCycle - Track Your Period</h2>
+  <div id="nextPeriodDate" style="margin-top: 20px;"></div>
+  <form id="trackerForm">
+    <label>Start Date: <input type="date" id="start" required></label><br>
+    <label>End Date: <input type="date" id="end" required></label><br>
+    <label>Symptoms (comma separated): <input type="text" id="symptoms"></label><br>
+
+    <label>Flow Level:
+      <select id="flowLevel">
+        <option value="Light">Light</option>
+        <option value="Medium">Medium</option>
+        <option value="Heavy">Heavy</option>
+      </select>
+    </label><br>
+
+    <label>Pain Level (0–10): <input type="number" id="painLevel" min="0" max="10"></label><br>
+    <label>Mood: <input type="text" id="mood"></label><br>
+    <label>Notes: <textarea id="notes"></textarea></label><br>
+    <button type="submit">Save</button>
+  </form>
+  <div id="calendar" style="margin-top: 20px;"></div>
+
+  <script src="js/tracker.js"></script>
+</body>
+</html>
+
