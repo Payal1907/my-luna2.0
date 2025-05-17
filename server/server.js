@@ -1,6 +1,4 @@
 require("dotenv").config(); // Make sure this is at the top!
-console.log("🔑 Gemini API Key:", process.env.GEMINI_API_KEY);
-
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');

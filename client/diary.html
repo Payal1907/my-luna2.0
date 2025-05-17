@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MyLoom Diary</title>
+  <title>MyLoom</title>
   <style>
     :root {
       --light-pink: #FFE5EC;
@@ -15,19 +15,23 @@
 
     body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--light-pink);
+  background-color: #fefefe;
   margin: 0;
   padding: 20px;
   color: #333;
 }
-
-h2,h3 {
+h2 {
+  text-align: center;
+  color: black;
+  font-size: 1.6rem;
+}
+h3 {
   text-align: center;
   color: var(--bold-pink);
   font-size: 2rem;
 }
     form {
-      background: white;
+      background-color: #f3f3f3;
       padding: 1.5rem;
       border-radius: 1rem;
       box-shadow: 0 0 10px var(--soft-pink);
@@ -45,7 +49,7 @@ h2,h3 {
       width: 100%;
       padding: 0.5rem;
       margin-top: 0.3rem;
-      border: 1px solid var(--medium-pink);
+      border: 1px solid #cccccc;
       border-radius: 0.5rem;
     }
 
@@ -169,7 +173,7 @@ h2,h3 {
   </div>
 
 
-  <h2>MyLoom Diary Entry</h2>
+  <h2>MyLoom Diary</h2>
   <form id="diaryForm">
     <label>Date: <input type="date" id="date" required></label>
     <label>Mood:
