@@ -11,7 +11,7 @@ document.getElementById('trackerForm').addEventListener('submit', async (e) => {
   const painLevel = parseInt(document.getElementById('painLevel').value);
   const mood = document.getElementById('mood').value;
 
-  const response = await fetch('http://localhost:5000/tracker', {
+  const response = await fetch('https://my-luna2.onrender.com/tracker', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

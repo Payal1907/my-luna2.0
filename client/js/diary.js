@@ -12,7 +12,7 @@ document.getElementById('diaryForm').addEventListener('submit', async (e) => {
   const harmonyScore = calculateHarmonyScore(stressLevel, sleepHours, screenTime, mood);
   const token = localStorage.getItem('token');
 
-  const res = await fetch('http://localhost:5000/diary', {
+  const res = await fetch('https://my-luna2.onrender.com/diary', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' ,
       'Authorization': `Bearer ${token}`

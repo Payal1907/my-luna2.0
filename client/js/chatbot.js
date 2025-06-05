@@ -15,9 +15,9 @@ document.getElementById("send").addEventListener("click", async () => {
   <div class="chat-message user">
     <strong>You:</strong> ${prompt}
   </div>`;
-  
+  //replaced local host link with render link , we deployed frontend on netlify and backend on render
     try {
-      const res = await fetch("http://localhost:5000/chatbot/analyze", {
+      const res = await fetch("https://my-luna2.onrender.com/chatbot/analyze", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,9 +42,3 @@ document.getElementById("send").addEventListener("click", async () => {
     // Clear input
     document.getElementById("prompt").value = "";
   });
-  
-  
-  
-  
-  
-  

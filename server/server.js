@@ -32,3 +32,5 @@ app.use('/user', verifyToken, userRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+//npm init -y
+//npm install express mongoose cors dotenv bcryptjs jsonwebtoken
