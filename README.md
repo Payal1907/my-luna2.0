@@ -2,9 +2,6 @@
 
 **MyLuna** is your intelligent period wellness companion — designed to support users with **cycle tracking**, **emotional journaling**, and **AI-powered health guidance**. From predicting periods to managing mood swings and chatting with Devi, your personalized assistant, MyLuna makes menstrual and emotional wellness simple, smart, and empowering.
 
-## 💡 Features
-![Dashboard Preview](./Dashboard.png)
-
 ### 🌸 LunaCycle – Period Tracker
 - Predicts upcoming periods and fertile windows
 - Visual calendar interface
